@@ -1,3 +1,4 @@
+import sys
 from BinaryTree import BinaryTree,BinaryTreeNode
 
 maximum = -1
@@ -7,6 +8,12 @@ def build_tree():
     for i in range(1,11):
         tree.add_node(i)
     return tree
+
+def find_max(node):
+    if not node:
+        return -sys.maxsize
+    else :
+        return max(find_max(node.get_left()),node.get_data(),find_max(node.get_right()))
 
 
 def find_maximum(node=None):
@@ -69,7 +76,9 @@ def print_levelorder(root):
 
 if __name__=="__main__":
     tree = build_tree()
-    tree.level_order()
+    #tree.level_order()
+    print(find_max(tree.root))
+    print(__find_max(tree.root))
 
 
 

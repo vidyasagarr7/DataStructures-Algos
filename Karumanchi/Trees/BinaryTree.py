@@ -302,7 +302,10 @@ if __name__=="__main__":
     tree = BinaryTree()
     for i in range(1,10):
         tree.add_node(i)
-    print(tree.level_order())
+    #print(tree.level_order())
+
+    #tree.print_postorder()
+    tree._print_postorder(tree.root)
 
     print("Size of Tree : "+str(tree.size_tree()))
 

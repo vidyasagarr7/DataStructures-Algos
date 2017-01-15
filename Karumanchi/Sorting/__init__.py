@@ -1,3 +1,3 @@
-from . import InsertionSort,MergeSort,MergeSort2
+from . import InsertionSort,MergeSort,MergeSort2,QuickSort
 
 

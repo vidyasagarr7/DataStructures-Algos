@@ -48,7 +48,6 @@ def _find_numbers(input_list):
     return input_list[min_left],input_list[min_right]
 
 
-
 if __name__=="__main__":
     test=[1,60,-10,70,-80,85]
 
