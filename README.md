@@ -1,4 +1,5 @@
-# DataStructures-Algos
+# DataStructures and Algorithms in Python 
 
 # Author : Vidya Sagar
-# Data Structures and algorithms in Python
+# Source : GeeksforGeeks , Data Structures and Algorithms made easy by Narasimha Karumanchi
+
