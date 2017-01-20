@@ -139,6 +139,42 @@ class BinaryTree :
                 node = stac2.pop()
                 print(node.data)
 
+    def _height(self,node):
+        """
+        recursive
+        :param node:
+        :return:
+        """
+        if not node :
+            return 0
+        else :
+            lh = self._height(node.left)
+            rh = self._height(node.right)
+
+            return max(lh,rh)+1
+
+    def height(self):
+        if not self.root :
+            return 0
+        else :
+            height = 0
+            que = Queue()
+            que.put((self.root,1))
+            while not que.empty() :
+                node,level = que.get()
+                if level > height :
+                    height = level
+                if node.left :
+                    que.put((node.left,level+1))
+                if node.right :
+                    que.put((node.right,level+1))
+            return height
+
+
+
+
+
+
 if __name__=='__main__':
     bt = BinaryTree()
     for i in range(1,10):
@@ -158,4 +194,6 @@ if __name__=='__main__':
 
     #bt.print_postorder()
 
-    bt.pprint_postorder()
+    #bt.pprint_postorder()
+
+    print(bt.height())

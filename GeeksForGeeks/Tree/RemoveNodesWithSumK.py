@@ -51,41 +51,24 @@ For input k = 45, the tree should be changed to following.
     15
 """
 
-def remove_nodes(node,_sum) :
+def remove_nodes(node,_sum):
     if not node :
         return
     else :
-        node.left  = remove_nodes(node.left,_sum-node.data)
+        node.left = remove_nodes(node.left, _sum - node.data)
         node.right = remove_nodes(node.right, _sum - node.data)
 
         if not node.left and not node.right :
             if node.data < _sum :
-                node = None
-                return node
+                node  = None
         return node
 
-
-if __name__ == '__main__':
+if __name__ =='__main__':
     bt = BinaryTree()
-    for i in range(1,20) :
+    for i in range(1,20):
         bt.add_node(i)
-
     remove_nodes(bt.root,25)
     bt.print_levelorder()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
