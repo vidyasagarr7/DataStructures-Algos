@@ -1,4 +1,6 @@
 
-trying to check what else have changed. 
+trying to check what else have changed
+
+Just checking if my stash works fine. 
 
 this is just a text file that I am using for testing.
